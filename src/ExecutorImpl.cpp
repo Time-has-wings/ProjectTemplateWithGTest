@@ -39,6 +39,46 @@ namespace adas
                     break;
                 }
             }
+            else if (command == 'L')
+            {
+                switch (pose.heading)
+                {
+                case 'N':
+                    pose.heading = 'W';
+                    break;
+                case 'S':
+                    pose.heading = 'E';
+                    break;
+                case 'E':
+                    pose.heading = 'N';
+                    break;
+                case 'W':
+                    pose.heading = 'S';
+                    break;
+                default:
+                    break;
+                }
+            }
+            else if (command == 'R')
+            {
+                switch (pose.heading)
+                {
+                case 'N':
+                    pose.heading = 'E';
+                    break;
+                case 'S':
+                    pose.heading = 'W';
+                    break;
+                case 'E':
+                    pose.heading = 'S';
+                    break;
+                case 'W':
+                    pose.heading = 'N';
+                    break;
+                default:
+                    break;
+                }
+            }
         }
     }
 }
