@@ -14,6 +14,7 @@ namespace adas
         // 不能赋值
         ExecutorImpl &operator=(const ExecutorImpl &) = delete;
         Pose Query(void) const noexcept override;
+        void Execute(const std::string &commands) noexcept override;
 
     private:
         Pose pose;
